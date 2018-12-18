@@ -2,11 +2,35 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>Conexion</servlet-name>
-        <servlet-class>packServlet.Conexion</servlet-class>
+        <servlet-class>packBD.Conexion</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SrvLoguearse</servlet-name>
+        <servlet-class>packServlets.SrvLoguearse</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GestorClientes</servlet-name>
+        <servlet-class>packBD.GestorClientes</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Cliente</servlet-name>
+        <servlet-class>packModelo.Cliente</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Conexion</servlet-name>
         <url-pattern>/Conexion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SrvLoguearse</servlet-name>
+        <url-pattern>/SrvLoguearse</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GestorClientes</servlet-name>
+        <url-pattern>/GestorClientes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Cliente</servlet-name>
+        <url-pattern>/Cliente</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
