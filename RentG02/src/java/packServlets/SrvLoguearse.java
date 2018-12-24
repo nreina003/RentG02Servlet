@@ -33,26 +33,16 @@ public class SrvLoguearse extends HttpServlet {
         c.conectar();
     }
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, Exception {
 
         try {
 
             String email = request.getParameter("email");
-            String contraseña = request.getParameter("contrasena");
+            String contraseña = request.getParameter("contraseña");
 
             boolean encontrado = GestorClientes.getInstance().buscarCliente(email);
             if (!encontrado) {
-                String path1 = "'inicioCliente.jsp'";
                 response.setContentType("text/html");
                 //PrintWriter out = null;
                 try {
@@ -96,12 +86,5 @@ public class SrvLoguearse extends HttpServlet {
             response.sendRedirect("loguearse.jsp");
         }
     }
-
-    /**
-     *
-     * @author ADMIN
-     */
-    
-     
 
     }

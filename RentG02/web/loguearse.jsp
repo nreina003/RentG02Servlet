@@ -41,13 +41,12 @@ and open the template in the editor.
             <div>
                 <section id="articulosprincipales">
                     
-                    <!-- mirar porque en el form no admite post arreglarlo -->
                     <form method="post">
                         <p>Email:<input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="" />
                         <p>Contraseña:<input type="password" name="contraseña" id="contraseña" maxlength="10" size="10" required="" />
                             
                          
-                            <button type="button" id="login1">Login</button>
+                            <button type="submit" name="login" id="login">Login</button>
                             <input type="reset" value="Reset">
                     </form>
 

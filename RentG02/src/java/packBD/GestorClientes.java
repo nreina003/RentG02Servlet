@@ -39,12 +39,10 @@ public class GestorClientes {
         ResultSet resultado;
         boolean encontrado = false;
         Conexion c = Conexion.getInstance();
-
         c.conectar();
         
         try {
             resultado = c.getSt().executeQuery("SELECT email FROM Clientes WHERE email = '" + pEmail + "'");
-
             if (resultado.next()) {
                 encontrado = true;
             }
@@ -54,7 +52,6 @@ public class GestorClientes {
         } finally {
             c.desconectar();
         }
-        
         return encontrado;
     }
     

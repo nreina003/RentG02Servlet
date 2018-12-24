@@ -35,7 +35,7 @@ public class Conexion {
 
     public void conectar() {
         try {
-            Class.forName("org.gjt.mm.mysql.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             con = (Connection) DriverManager.getConnection(url, userName, password);
             st = (Statement) con.createStatement();
         } catch (ClassNotFoundException | SQLException e) {
