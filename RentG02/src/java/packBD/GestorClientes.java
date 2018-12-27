@@ -5,12 +5,7 @@
  */
 package packBD;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
 import java.sql.*;
 import java.util.ArrayList;
 import packModelo.Cliente;
@@ -42,7 +37,7 @@ public class GestorClientes {
         c.conectar();
         
         try {
-            resultado = c.getSt().executeQuery("SELECT email FROM Clientes WHERE email = '" + pEmail + "'");
+            resultado = c.getSt().executeQuery("SELECT email FROM clientes WHERE email = '" + pEmail + "'");
             if (resultado.next()) {
                 encontrado = true;
             }
@@ -62,7 +57,7 @@ public class GestorClientes {
         c.conectar();
 
         try {
-            resultado = c.getSt().executeQuery("SELECT contraseña FROM Clientes WHERE email = '" + pEmail + "' AND contraseña = '" + pContraseña + "'");
+            resultado = c.getSt().executeQuery("SELECT contraseña FROM clientes WHERE email = '" + pEmail + "' AND contraseña = '" + pContraseña + "'");
 
             if (resultado.next()) {
                 coincide = true;
@@ -72,6 +67,7 @@ public class GestorClientes {
         }
         return coincide;
     }
+    
     /*
 
     public boolean altaPaciente(Integer pTIS, Date pFechaNacimiento, String pNombre, String pSexo, Integer pTelefono) {
@@ -181,28 +177,7 @@ public class GestorClientes {
         return coincide;
     }
 
-    public boolean buscarPaciente(int pTIS) {
-        ResultSet resultado;
-        boolean encontrado = false;
-        Conexion c = Conexion.getInstance();
-
-        c.conectar();
-        
-        try {
-            resultado = c.getSt().executeQuery("SELECT TIS FROM Paciente WHERE TIS = '" + pTIS + "'");
-
-            if (resultado.next()) {
-                encontrado = true;
-            }
-        } 
-        catch (SQLException ex) {
-            System.err.println("SQLException: " + ex.getMessage());
-        } finally {
-            c.desconectar();
-        }
-        
-        return encontrado;
-    }
+    
     
     public Paciente mostrarPerfil(Integer TIS) {
         ResultSet r;

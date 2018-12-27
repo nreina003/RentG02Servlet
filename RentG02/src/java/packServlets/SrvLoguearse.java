@@ -37,21 +37,22 @@ public class SrvLoguearse extends HttpServlet {
             throws ServletException, IOException, Exception {
 
         try {
-
+System.out.println("aqui 1");
             String email = request.getParameter("email");
             String contraseña = request.getParameter("contraseña");
 
             boolean encontrado = GestorClientes.getInstance().buscarCliente(email);
             if (!encontrado) {
                 response.setContentType("text/html");
+                System.out.println("aqui 2");
                 //PrintWriter out = null;
                 try {
                     //out = response.getWriter();
                     JOptionPane.showMessageDialog(null, "email incorrecta", "RentG", JOptionPane.WARNING_MESSAGE);
-                    response.sendRedirect("loguearse.jsp");
+                    response.sendRedirect("inicioCliente.jsp");
                 } catch (IOException e) {
                     System.out.println("Se ha producido una IOException");
-                    response.sendRedirect("loguearse.jsp");
+                    response.sendRedirect("inicioCliente.jsp");
                 }
 
             } else {
@@ -65,10 +66,10 @@ public class SrvLoguearse extends HttpServlet {
                         try {
                             //out = response.getWriter();
                             JOptionPane.showMessageDialog(null, "Contraseña incorrecta", "RentG", JOptionPane.WARNING_MESSAGE);
-                            response.sendRedirect("loguearse.jsp");
+                            response.sendRedirect("inicioCliente.jsp");
                         } catch (IOException e) {
                             System.out.println("Se ha producido una IOException");
-                            response.sendRedirect("loguearse.jsp");
+                            response.sendRedirect("inicioCliente.jsp");
                         }
 
                     } else {

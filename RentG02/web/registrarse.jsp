@@ -18,8 +18,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link rel="stylesheet" href="css/index.css">
        <link rel="icon" type="image/png" href="img/favicon.png" />
-        <script src="js/indexedDB.js"></script>
-        <script src="js/registrarse.js"></script>
+       <script src="js/registrarse.js"></script>
     </head>
     <body>
 
