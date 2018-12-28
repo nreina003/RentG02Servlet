@@ -62,6 +62,7 @@ public boolean comprobarCliente(String pEmail, String pMovil, String pDni) {
             HttpSession session = req.getSession();
             session.invalidate();
         }
+        //MIRAR
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse res)
