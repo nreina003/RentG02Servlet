@@ -42,12 +42,12 @@ and open the template in the editor.
             <div>
                 <section id="articulosprincipales">
                     <section id="cajaformulario">
-                        <form name="formulario" method="post">
+                        <form action="SvrRegistrarse" name="formulario" method="post">
                             <p><label>Nombre: <input type="text" id="nombre" name="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}" required=""/></label></p>
                             <p><label>DNI: <input type="text" id="dni" name="dni" maxlength="9" pattern="[0-9]{9}" /></label></p>
                             <p><label>Movil: <input  type="text" id="movil" name="movil" ></label></p>
                             <p><label>Correo: <input  type="email" id="email" name="email" required=""></label></p>
-                            <p><label>Contraseña: <input  type="password" id="contraseña" name="contraseña" maxlength="10" size="10" required="" /></p>
+                            <p><label>Contraseña: <input  type="password" id="contrasena" name="contrasena" maxlength="10" size="10" required="" /></p>
                             <label for="archivos">Archivo: </label>
                             <input type="file" name="archivos" id="archivos">
 
@@ -58,7 +58,7 @@ and open the template in the editor.
                             </section>
 
                             <p>
-                                <button type="button" id="regis">Registrarse</button>
+                                <input type="submit" id="regis" value="Enviar">
                                 <input type="reset" value="Reset">
                         </form>
                     </section>				

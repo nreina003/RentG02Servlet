@@ -1,30 +1,19 @@
-<%-- 
-    Document   : loguearse
-    Created on : 17-dic-2018, 16:51:19
-    Author     : ADMIN
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Loguearse</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <link rel="stylesheet" href="css/index.css">
         <script src="js/indexedDB.js"></script>
         <script src="js/loguearse.js"></script>
-        <link rel="icon" type="image/png" href="img/favicon.png" />
-       <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
         <header id="cabeceralogo">
             <div>
-               <a href="index.jsp"><h1>RENTG02</h1></a>
+                <a href="index.jsp"><h1>RENTG02</h1></a>
             </div>
         </header>
         <nav id="menuprincipal">
@@ -40,14 +29,14 @@ and open the template in the editor.
         <main>
             <div>
                 <section id="articulosprincipales">
-                    
-                    <form action="SrvLoguearse" method="post">
+
+                    <form name="formpac" id="formpac" action="SrvLoguearse" method="post">
                         <p>Email:<input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="" />
-                        <p>Contraseña:<input type="password" name="contraseña" id="contraseña" maxlength="10" size="10" required="" />
-                            
-                         
-                            <button type="submit" name="login" id="login">Login</button>
-                            <input type="reset" value="Reset">
+                        <p>Contraseña:<input type="password" name="contrasena" id="contrasena" maxlength="10" size="10" required="" />
+
+                      
+                            <input type="submit" name="login" id="login"/>
+                           <input type="reset" value="Reset"/>
                     </form>
 
                 </section>
@@ -56,16 +45,16 @@ and open the template in the editor.
                     <p>Vitoria</p>
                     <p>Donostia</p>
                     <p>Bilbo</p>
-                     <div id="logo">
+                    <div id="logo">
                         <img src="img/favicon.png" alt="Logo" />
                     </div>
                 </aside>
                 <div class="recuperar"></div>
             </div>
         </main>
-        
-        
-        
+
+
+
         <footer id="pielogo">
             <div>
                 <section class="seccionpie">

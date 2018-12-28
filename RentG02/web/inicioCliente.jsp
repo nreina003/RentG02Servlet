@@ -4,6 +4,7 @@
     Author     : ADMIN
 --%>
 
+<%@page import="packBD.GestorClientes"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!--
@@ -58,15 +59,19 @@ and open the template in the editor.
                             con su coche alquilado, tenemos un equipo a su disposición. Puede llamar 
                             o contactarnos a cualquier hora del día o de la noche, 365 días por año.</p>
                     </article>
-                    <section id="saludo" >
-                    </section>
+                    <div id="logTitulo">
+                        Hola, <% String pEmail = (String) session.getAttribute("email");
+                        String nombre = GestorClientes.getInstance().getNombre(pEmail);
+                        %>
+                        <%= nombre%>, bienvenido a tu menu principal <br>
+                    </div> 
                 </section>
                 <aside id="infoadicional">
                     <h1>Nuestras oficinas</h1>
                     <p>Vitoria</p>
                     <p>Donostia</p>
                     <p>Bilbo</p>
-                     <div id="logo">
+                    <div id="logo">
                         <img src="img/favicon.png" alt="Logo" />
                     </div>
                 </aside>

@@ -16,6 +16,14 @@
         <servlet-name>Cliente</servlet-name>
         <servlet-class>packModelo.Cliente</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SvrRegistrarse</servlet-name>
+        <servlet-class>packServlets.SvrRegistrarse</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GestorRegistrarse</servlet-name>
+        <servlet-class>packBD.GestorRegistrarse</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Conexion</servlet-name>
         <url-pattern>/Conexion</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>Cliente</servlet-name>
         <url-pattern>/Cliente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvrRegistrarse</servlet-name>
+        <url-pattern>/SvrRegistrarse</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GestorRegistrarse</servlet-name>
+        <url-pattern>/GestorRegistrarse</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
